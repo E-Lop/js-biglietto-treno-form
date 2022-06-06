@@ -4,9 +4,31 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calcolatore costo biglietto del treno</title>
   </head>
   <body>
+    <div class="user_data_form">
+      <!-- campo di input nominativo utente -->
+      <div class="user_form_item">
+        <label for="user_full_name">Come e Cognome</label>
+        <input type="text" id="user_full_name" name="user_full_name" />
+      </div>
+      <!-- campo di input km da percorrere -->
+      <div class="user_form_item">
+        <label for="trip_length">Km da percorrere</label>
+        <input type="text" id="trip_length" name="trip_length" />
+      </div>
+      <!-- campo di input a tendina tipo di tariffa -->
+      <div class="user_form_item">
+        <select
+          for="tariff_category"
+          id="tariff_category"
+          name="tariff_category"
+        >
+          Fascia d'età
+        </select>
+      </div>
+    </div>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
