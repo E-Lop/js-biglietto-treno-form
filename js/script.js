@@ -11,6 +11,7 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 // variabile bottone generatore di biglietto
 const generateButton = document.getElementById('data_generation');
 
+// cattura input alla pressione del tasto Genera
 generateButton.addEventListener('click', function () {
   const userFullName = document.getElementById('user_full_name').value;
   const userKm = parseInt(document.getElementById('trip_length').value);
@@ -18,4 +19,15 @@ generateButton.addEventListener('click', function () {
   console.log(userFullName);
   console.log(userKm);
   console.log(prizeCategory);
+
+  // calcolo costo biglietto senza sconti
+  let ticketFinalPrice = userKm * 0.21;
+
+  // calcolo costo biglietto scontato
+  if (prizeCategory === 'minorenne') {
+    ticketFinalPrice *= 0.8;
+  } else if (prizeCategory === 'over') {
+    ticketFinalPrice *= 0.6;
+  }
+  console.log(`Il costo del biglietto è ${ticketFinalPrice.toFixed(2)} euro`);
 });
