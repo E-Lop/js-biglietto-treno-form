@@ -37,7 +37,19 @@ h2 {
 .user_form_item label {
   padding-bottom: 0.5rem;
 }
+.user_form_item input,
+.user_form_item select {
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+}
 .buttons {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding-top: 30px;
+}
+.buttons button {
+  margin: 0 15px;
+  padding: 0 0.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
 }
