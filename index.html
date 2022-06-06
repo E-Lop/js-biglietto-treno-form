@@ -16,7 +16,7 @@
   <body>
     <h2>calcola il prezzo del tuo biglietto</h2>
     <!-- form di richiesta dati all'utente -->
-    <div class="user_data_form container">
+    <div class="user_data_form white_area container">
       <div class="row justify-content-around">
         <!-- campo di input nominativo utente -->
         <div class="col-3 user_form_item">
@@ -29,7 +29,7 @@
         <div class="col-3 user_form_item">
           <div class="input_card">
             <label for="trip_length">Km da percorrere</label>
-            <input type="text" id="trip_length" name="trip_length" />
+            <input type="number" id="trip_length" name="trip_length" />
           </div>
         </div>
         <!-- campo di input a tendina tipo di tariffa -->
@@ -53,9 +53,39 @@
     </div>
 
     <!-- informazioni sul biglietto visibili solo quando si preme il bottone Genera -->
-    <div class="ticket_info">
-      <div>Nome passeggero: <span id="actualUserName"></span></div>
-      <div>Prezzo biglietto: <span id="actualTicketPrice"></span> euro</div>
-    </div>
+    <section id="ticket_reveal" class="">
+      <h2 class="ticket_title">il tuo biglietto</h2>
+      <div class="ticket_info white_area container">
+        <div class="row ticket_details">
+          <h3>dettaglio passeggeri</h3>
+          <div class="col-3 user_printed_name">
+            <div>NOME PASSEGGERO</div>
+            <div id="actualUserName"></div>
+          </div>
+          <div class="col-9 ticket_numbers">
+            <div class="ticket_card">
+              <!-- tipo di biglietto -->
+              <div class="card_title">Offerta</div>
+              <div id="ticket_type"></div>
+            </div>
+            <div class="ticket_card">
+              <!-- numero di carrozza -->
+              <div class="card_title">Carrozza</div>
+              <div id="carriage"></div>
+            </div>
+            <div class="ticket_card">
+              <!-- Codice CP -->
+              <div class="card_title">Codice CP</div>
+              <div id="cp_code"></div>
+            </div>
+            <div class="ticket_card">
+              <!-- Costo del biglietto -->
+              <div class="card_title">Costo biglietto</div>
+              <div id="ticket_amount"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>

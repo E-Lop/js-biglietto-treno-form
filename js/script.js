@@ -19,9 +19,9 @@ generateButton.addEventListener('click', function () {
   const userFullName = document.getElementById('user_full_name').value;
   const userKm = parseInt(document.getElementById('trip_length').value);
   const prizeCategory = document.getElementById('tariff_category').value;
-  console.log(userFullName);
-  console.log(userKm);
-  console.log(prizeCategory);
+
+  //   biglietto reso visibile
+  document.getElementById('ticket_reveal').classList.add('active');
 
   // calcolo costo biglietto senza sconti
   let ticketFinalPrice = userKm * 0.21;
@@ -34,7 +34,25 @@ generateButton.addEventListener('click', function () {
   }
   console.log(`Il costo del biglietto è ${ticketFinalPrice.toFixed(2)} euro`);
 
+  //   calcolo tipo di offerta per il biglietto
+  let ticketType = 'Biglietto Standard';
+  if (prizeCategory === 'minorenne') {
+    ticketType = 'Biglietto Minori';
+  } else if (prizeCategory === 'over') {
+    ticketType = 'Biglietto Senior';
+  }
+
+  //   inserimento dati in HTML
   document.getElementById('actualUserName').innerHTML = userFullName;
-  document.getElementById('actualTicketPrice').innerHTML =
+  document.getElementById('ticket_type').innerHTML = ticketType;
+  document.getElementById('ticket_amount').innerHTML =
     ticketFinalPrice.toFixed(2);
+});
+
+// reset dei dati alla pressione del bottone annulla e biglietto reso invisibile
+resetButton.addEventListener('click', function () {
+  document.getElementById('user_full_name').value = '';
+  document.getElementById('trip_length').value = '';
+  document.getElementById('tariff_category').value = 'maggiorenne';
+  document.getElementById('ticket_reveal').classList.remove('active');
 });
