@@ -7,3 +7,15 @@ va applicato uno sconto del 40% per gli over 65.
 Il recap dei dati e l'output del prezzo finale va stampato in pagina 
 (formattato con massimo due decimali, per indicare centesimi sul prezzo). 
 */
+
+// variabile bottone generatore di biglietto
+const generateButton = document.getElementById('data_generation');
+
+generateButton.addEventListener('click', function () {
+  const userFullName = document.getElementById('user_full_name').value;
+  const userKm = parseInt(document.getElementById('trip_length').value);
+  const prizeCategory = document.getElementById('tariff_category').value;
+  console.log(userFullName);
+  console.log(userKm);
+  console.log(prizeCategory);
+});

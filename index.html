@@ -7,6 +7,7 @@
     <title>Calcolatore costo biglietto del treno</title>
   </head>
   <body>
+    <!-- form di richiesta dati all'utente -->
     <div class="user_data_form">
       <!-- campo di input nominativo utente -->
       <div class="user_form_item">
@@ -25,10 +26,15 @@
           id="tariff_category"
           name="tariff_category"
         >
-          Fascia d'età
+          <option value="maggiorenne">Maggiorenne</option>
+          <option value="minorenne">Minorenne</option>
+          <option value="over">Over 65</option>
         </select>
       </div>
     </div>
+
+    <!-- bottoni -->
+    <button id="data_generation">Genera</button>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
