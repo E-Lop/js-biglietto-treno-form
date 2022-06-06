@@ -61,7 +61,7 @@ h2 {
 
 /* layout spazio del biglietto */
 #ticket_reveal {
-  display: none;
+  /* display: none; */
 }
 .ticket_title {
   padding-top: 20px;
