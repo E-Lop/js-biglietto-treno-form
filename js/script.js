@@ -8,8 +8,11 @@ Il recap dei dati e l'output del prezzo finale va stampato in pagina
 (formattato con massimo due decimali, per indicare centesimi sul prezzo). 
 */
 
+/*** BOTTONI ***/
 // variabile bottone generatore di biglietto
 const generateButton = document.getElementById('data_generation');
+// variabile bottone Annulla
+const resetButton = document.getElementById('total_reset');
 
 // cattura input alla pressione del tasto Genera
 generateButton.addEventListener('click', function () {
@@ -30,4 +33,8 @@ generateButton.addEventListener('click', function () {
     ticketFinalPrice *= 0.6;
   }
   console.log(`Il costo del biglietto è ${ticketFinalPrice.toFixed(2)} euro`);
+
+  document.getElementById('actualUserName').innerHTML = userFullName;
+  document.getElementById('actualTicketPrice').innerHTML =
+    ticketFinalPrice.toFixed(2);
 });
