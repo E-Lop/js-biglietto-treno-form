@@ -42,12 +42,20 @@ generateButton.addEventListener('click', function () {
     ticketType = 'Biglietto Senior';
   }
 
+  //   generatore numero random carrozza
+  const carriageNumber = Math.floor(Math.random() * 10) + 1;
+
+  //   generatore numero random CP
+  const cpNumber = Math.floor(Math.random() * 1000) + 1;
+
   //   inserimento dati in HTML
   document.getElementById('actualUserName').innerHTML = userFullName;
   document.getElementById('ticket_type').innerHTML = ticketType;
   document.getElementById(
     'ticket_amount'
   ).innerHTML = `${ticketFinalPrice.toFixed(2)} euro`;
+  document.getElementById('carriage').innerHTML = carriageNumber;
+  document.getElementById('cp_code').innerHTML = cpNumber;
 });
 
 // reset dei dati alla pressione del bottone annulla e biglietto reso invisibile
